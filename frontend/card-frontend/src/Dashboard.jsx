@@ -17,7 +17,7 @@ const Dashboard = () => {
 
   const fetchCards = async () => {
     try {
-      const res = await axios.get("https://react-ques-card.onrender.com");
+      const res = await axios.get("https://react-ques-card-backe.onrender.com");
       setCards(res.data);
     } catch (err) {
       console.error("Error fetching cards:", err);
@@ -35,9 +35,9 @@ const Dashboard = () => {
   
     try {
       if (editingCard) {
-        await axios.put(`https://react-ques-card.onrender.com/dashboard/${editingCard.id}`, newCard);
+        await axios.put(`https://https://react-ques-card-backe.onrender.com/dashboard/${editingCard.id}`, newCard);
       } else {
-        await axios.post("https://react-ques-card.onrender.com/dashboard", newCard);
+        await axios.post("https://https://react-ques-card-backe.onrender.com/dashboard", newCard);
       }
       fetchCards();
       setNewCard({ question: '', answer: '' });
@@ -55,7 +55,7 @@ const Dashboard = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://react-ques-card.onrender.com/${id}`);
+      await axios.delete(`https://https://react-ques-card-backe.onrender.com/${id}`);
       fetchCards();
     } catch (err) {
       console.error("Error deleting card:", err);
