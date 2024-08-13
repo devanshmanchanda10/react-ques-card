@@ -33,6 +33,7 @@
 // app.listen(8800,()=>{
 //   console.log('Server is running on port 8800');
 // });
+
 require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql2');
@@ -42,7 +43,7 @@ const app = express();
 app.use(express.json());
 app.use(cors())
 
-const pool = mysql.createPool({
+const db = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
