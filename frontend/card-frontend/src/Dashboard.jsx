@@ -35,9 +35,9 @@ const Dashboard = () => {
   
     try {
       if (editingCard) {
-        await axios.put(`https://https://react-ques-card-backe.onrender.com/dashboard/${editingCard.id}`, newCard);
+        await axios.put(`https://react-ques-card-backe.onrender.com/dashboard/${editingCard.id}`, newCard);
       } else {
-        await axios.post("https://https://react-ques-card-backe.onrender.com/dashboard", newCard);
+        await axios.post("https://react-ques-card-backe.onrender.com/dashboard", newCard);
       }
       fetchCards();
       setNewCard({ question: '', answer: '' });
