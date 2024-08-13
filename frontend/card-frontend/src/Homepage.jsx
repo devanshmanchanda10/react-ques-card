@@ -84,7 +84,7 @@ const Homepage = () => {
   if (cards.length === 0) {
     return (
       <div>
-        <h2>no card add cards in dashboard</h2>
+        <h2>Loading , add card</h2>
         <button onClick={handleDashboardClick}>dashboard</button>
       </div>
     );
